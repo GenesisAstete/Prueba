@@ -1,0 +1,20 @@
+[debug] [2020-09-22T20:57:48.279Z] ----------------------------------------------------------------------
+[debug] [2020-09-22T20:57:48.286Z] Command:       /home/saltala/.nvm/versions/node/v12.5.0/bin/node /home/saltala/.nvm/versions/node/v12.5.0/bin/firebase deploy
+[debug] [2020-09-22T20:57:48.287Z] CLI Version:   8.10.0
+[debug] [2020-09-22T20:57:48.288Z] Platform:      linux
+[debug] [2020-09-22T20:57:48.288Z] Node Version:  v12.5.0
+[debug] [2020-09-22T20:57:48.303Z] Time:          Tue Sep 22 2020 17:57:48 GMT-0300 (GMT-03:00)
+[debug] [2020-09-22T20:57:48.304Z] ----------------------------------------------------------------------
+[debug] [2020-09-22T20:57:48.304Z] 
+[debug] [2020-09-22T20:57:48.338Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-22T20:57:48.340Z] > authorizing via signed-in user
+[debug] [2020-09-22T20:57:48.341Z] [iam] checking project lapicadelviajero-1f992 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-09-22T20:57:48.354Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-09-22T20:57:48.357Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-09-22T20:57:48.531Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 22 Sep 2020 20:57:48 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-22T20:57:48.547Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/lapicadelviajero-1f992:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2020-09-22T20:58:08.576Z] [iam] error while checking permissions, command may fail: FirebaseError: Server Error. getaddrinfo ENOTFOUND cloudresourcemanager.googleapis.com
+[debug] [2020-09-22T20:58:08.579Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/lapicadelviajero-1f992  
+ 
