@@ -10,13 +10,17 @@ const createUserProfileDocument =async (user) => {
     const snapShot =  await userReference.get();
     if(!snapShot.exists) {
         const {displayName, email, photoURL} = user;
+        const city = "";
+        const uid = user.uid
         const createdAt = new Date();
         try {
             await userReference.set({
+                uid,
                 displayName,
                 email,
                 createdAt,
-                photoURL
+                photoURL,
+                city,
             })
         } catch (error) {
             console.log(error)
@@ -57,10 +61,10 @@ class ButtonGF extends Component {
         <div className="App">
             {this.state.isSignedIn ? (
                 <span>
-                    <h1>Welcome {auth.currentUser.displayName}</h1>
+        {/*             <h1>Welcome {auth.currentUser.displayName}</h1>
                     <img
                     alt="profile"
-                    src={auth.currentUser.photoURL}/>
+                    src={auth.currentUser.photoURL}/> */}
                    <Redirect push to='/home' />
                 </span>
             ) : (
