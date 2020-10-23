@@ -1,0 +1,42 @@
+img.Logo-Header {
+    width:70px;
+}
+
+.bg-dark {
+    background-color: #1e202b!important;
+    padding: 40px 22px;
+    color: white;
+}
+.bg-dark p {
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+div#navbarText li {
+    margin: 10px;
+    padding: 5px 25px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    transition: .3s ease;
+    font-weight: 400;
+}
+
+div#navbarText li:hover {
+    border-color: #009ad8;
+    color: #009ad8;
+}
+
+div#navbarText li a{
+    color: white;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    text-decoration: none;
+}
+
+/* p.textLogOut {
+    color: white;
+    margin: 0px 10px 0px 10px;
+} */
+
+.mr-auto, .mx-auto {
+    margin-left: auto!important;
+}

@@ -61,7 +61,7 @@ class ButtonGF extends Component {
                     <img
                     alt="profile"
                     src={auth.currentUser.photoURL}/>
-                   <Redirect push to='/muro' />
+                   <Redirect push to='/home' />
                 </span>
             ) : (
                 <StyledFirebaseAuth

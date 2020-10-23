@@ -4,22 +4,13 @@ import { auth} from '../firebase'
 
 class Signout extends React.Component {
 
-    getNavLinkClass = (path) => {
-      return this.props.location.pathname === path ? 'active' : '';
-    }
-  
-    logOut = () => {
-      auth.signOut();
-    }
-  
-    render() {
+      render() {
       return (
         <>
-        {/*       <span className={this.getNavLinkClass("/")} onClick={() => this.logOut("/login")}>  */}
-              <NavLink to="/">
+          <NavLink to="/">
                 <button onClick={() => auth.signOut()}>Cerrar sesión</button>
-              </NavLink>
-{/*              </span>  */}
+          </NavLink>
+
         </>
       )
     }
