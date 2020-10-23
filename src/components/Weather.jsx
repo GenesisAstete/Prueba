@@ -53,9 +53,9 @@ const Weather = () => {
           }
       } */
 
-      const [lat, setLat] = React.useState(undefined)
+/*       const [lat, setLat] = React.useState(undefined)
       const [lon, setLon] = React.useState(undefined)
-      const [part, setPart] = React.useState(undefined)
+      const [part, setPart] = React.useState(undefined) */
 
 
       //función para obtener el pronostico del tiempo
@@ -68,9 +68,10 @@ const Weather = () => {
             const api_call= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${Api_Key}`)
             const response = await api_call.json();
             console.log('response',response);
+/*            
             const api_call2 = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${Api_Key}`)
             const res = await api_call2.json();
-            console.log('res',res)
+            console.log('res',res) */
 
             //actualización de estados 
             setCheck(true)
@@ -81,9 +82,9 @@ const Weather = () => {
             setDescription(response.weather[0].description)
             setCity(response.name)
             setIcon(response.weather[0].icon)
-            setLat(-33.46)
-            setLon(-70.65)
-            setPart('')
+/*             setLat(response.coord.lat)
+            setLon(response.coord.lon)
+            setPart('') */
       }
        
     return (

@@ -29,12 +29,14 @@
     padding: 20px 50px 20px 20px!important;
     border-radius: 30px !important;
     text-transform: uppercase;
+    background: #1e202b;
 }
 .ant-input:hover {
     padding: 20px 50px 20px 20px;
     color: white;
     border: none;
     border-radius: 30px;
+    background: #1e202b;
 }
 .ant-space-align-center {
     text-align: center !important;
