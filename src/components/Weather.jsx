@@ -89,7 +89,7 @@ const Weather = () => {
     return (
     <div className="container mt-4">
         <form onSubmit={getWeather} className="form">
-           <Input className="inputFind" type="text" name="city" placeholder="Find your location"/>
+           <input className="inputFind" type="text" name="city" placeholder="Find your location"/>
            <button className="btn">FIND</button> 
         </form>
         {
