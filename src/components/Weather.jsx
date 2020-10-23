@@ -4,7 +4,6 @@ import '../style/weather.css'
 //import Save from './Save';
 //import {auth,db} from '../firebase'
 
-
 const Weather = () => {
 
     const [temperature, setTemperature] = React.useState(undefined)
