@@ -1,6 +1,8 @@
-.form{
+.formcity{
     position: relative;
     margin-bottom: 31px;
+    outline:none !important;
+    outline-width: 0 !important;
 }
 .inputFind:placeholder-shown {
     width: 100%;
@@ -11,6 +13,8 @@
     outline: none;
     border: none;
     border-radius: 30px;
+    outline:none !important;
+    outline-width: 0 !important;
 }
 .ant-input {
     background: white !important;
@@ -28,18 +32,24 @@
     color: white;
 }
 .inputFind {
+    width: 100%;
     padding: 20px 50px 20px 20px!important;
     border-radius: 30px !important;
+    border:none;
     text-transform: uppercase;
     background: #1e202b!important;
+    color: white;
 }
+button, input {
+    overflow: none;
+ }
 .inputFind:hover {
     padding: 20px 50px 20px 20px;
     color: white;
     border: none;
     border-radius: 30px;
-    background: #1e202b;
-}
+    background: #1e202b!important;
+} 
 .ant-space-align-center {
     text-align: center !important;
     display: flex !important;

@@ -14,6 +14,7 @@ const Weather = () => {
     const [description, setDescription] = React.useState(undefined)
     const [icon, setIcon] = React.useState({})
     const [check, setCheck] = React.useState(false)
+    const [error, setError] = React.useState(null)
 
     //función para obtener fecha actual
      const dateBuilder = () => {
@@ -60,9 +61,13 @@ const Weather = () => {
       //función para obtener el pronostico del tiempo
         const getWeather = async (event) => {
             event.preventDefault();
+
             const Api_Key = '59b86cbf85f89cdb95a459f856df4424'
             const city = event.target.elements.city.value;
-
+            if(!city.trim() ){
+                setError('CITY....!')
+                return
+            }
             //consumo de api 
             const api_call= await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${Api_Key}`)
             const response = await api_call.json();
@@ -81,6 +86,7 @@ const Weather = () => {
             setDescription(response.weather[0].description)
             setCity(response.name)
             setIcon(response.weather[0].icon)
+            setError(null)
 /*             setLat(response.coord.lat)
             setLon(response.coord.lon)
             setPart('') */
@@ -88,7 +94,14 @@ const Weather = () => {
        
     return (
     <div className="container mt-4">
-        <form onSubmit={getWeather} className="form">
+                                {
+                            error ? (
+                                <div className="alert alert-danger">
+                                    {error}
+                                </div>
+                            ) : null
+                        }
+        <form onSubmit={getWeather} className="formcity">
            <input className="inputFind" type="text" name="city" placeholder="Find your location"/>
            <button className="btn">FIND</button> 
         </form>
